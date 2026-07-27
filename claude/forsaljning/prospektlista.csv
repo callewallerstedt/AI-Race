@@ -1,21 +1,29 @@
-nr;organisation;typ;ort;domän;e-post;e-post_status;mall;källa;status
-1;Webbkompaniet AB;webbyrå;Stockholm;webbkompaniet.se;info@webbkompaniet.se;verifierad i sökresultat;A;WebSearch 2026-07-28;ej skickat
-2;Webbproffs;webbyrå;Göteborg;webbproffs.se;info@webbproffs.se;verifierad i sökresultat;A;WebSearch 2026-07-28;ej skickat
-3;Lightweb;webbyrå;Stockholm;lightweb.se;info@lightweb.se;verifierad i sökresultat;A;WebSearch 2026-07-28;ej skickat
-4;Intervaro;webbyrå;Malmö;intervaro.se;kontakt@intervaro.se;verifierad i sökresultat;A;WebSearch 2026-07-28;ej skickat
-5;Solvd;webbyrå;Göteborg;solvd.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-6;Projekt 46;webbyrå;Göteborg;projekt46.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-7;SverigeWebb;webbyrå;Stockholm/Uppsala;sverigewebb.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-8;Goldlife Webbyrå;webbyrå;Stockholm;goldlife.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-9;Stockholm Webbyrå;webbyrå;Stockholm;stockholm-webbyra.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-10;Wonderfour Digitalbyrå;webbyrå;Stockholm;wonderfour.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-11;Webbyrå WordPress;webbyrå;Sverige;webbyra-wordpress.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-12;Dahlquist;Shopify-byrå;Uddevalla;dahlquist.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-13;ZenDev;webbyrå;Göteborg;zendev.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-14;Noory Solution;webbyrå;Malmö;noorysolution.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-15;Smart Source;webbyrå;Uppsala;smartsource.eu;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-16;Hjältebyrån;webbyrå;Uppsala;hjaltebyran.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-17;Argonova;webbyrå;Uppsala;argonova.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-18;Webdezign;webbyrå;Umeå/Uppsala;webdezign.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-19;Infid;webbyrå;Stockholm;infid.dev;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
-20;The Generation;webbyrå;Stockholm;thegeneration.se;;behöver bekräftas;A;WebSearch 2026-07-28;ej skickat
+nr;organisation;typ;ort;domän;e-post;e-post_status;batch;mall;källa;status;utfall
+1;Webbkompaniet AB;webbyrå;Stockholm;webbkompaniet.se;info@webbkompaniet.se;verifierad;1;A;WebSearch 2026-07-28;ej skickat;
+2;Webbproffs;webbyrå;Kungsbacka;webbproffs.se;info@webbproffs.se;verifierad;1;A;WebSearch 2026-07-28;ej skickat;
+3;Lightweb;webbyrå;Stockholm;lightweb.se;info@lightweb.se;verifierad;1;A;WebSearch 2026-07-28;ej skickat;
+4;Intervaro;webbyrå;Malmö;intervaro.se;kontakt@intervaro.se;verifierad;1;A;WebSearch 2026-07-28;ej skickat;
+5;Dahlquist;e-handelsbyrå Magento/Shopify;Uddevalla;dahlquist.nu;kontakt@dahlquist.nu;verifierad;1;A;WebSearch 2026-07-28;ej skickat;
+6;Webbyrå Stockholm;webbyrå;Stockholm;webbyrastockholm.se;info@webbyrastockholm.se;verifierad;1;A;WebSearch 2026-07-28;ej skickat;
+7;Solvd;webbyrå WooCommerce;Göteborg;solvd.se;info@solvd.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+8;Projekt 46;webbyrå WordPress/WooCommerce;Göteborg;projekt46.se;info@projekt46.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+9;SverigeWebb;webbyrå WooCommerce;Stockholm/Uppsala;sverigewebb.se;info@sverigewebb.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+10;Goldlife Webbyrå;webbyrå WordPress;Stockholm/Öland;goldlife.se;info@goldlife.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+11;Stockholm Webbyrå;webbyrå WordPress/WooCommerce;Stockholm;stockholm-webbyra.se;info@stockholm-webbyra.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+12;Wonderfour Digitalbyrå;digitalbyrå WooCommerce;Stockholm;wonderfour.se;info@wonderfour.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+13;Webbyrå WordPress;webbyrå;Sverige;webbyra-wordpress.se;info@webbyra-wordpress.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+14;ZenDev;webbyrå;Göteborg;zendev.se;info@zendev.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+15;Noory Solution;webbyrå;Malmö;noorysolution.se;info@noorysolution.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+16;Smart Source;webbyrå;Uppsala;smartsource.eu;info@smartsource.eu;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+17;Hjältebyrån;webbyrå;Uppsala;hjaltebyran.se;info@hjaltebyran.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+18;Argonova;webbyrå e-handel B2B/B2C;Borås;argonova.se;info@argonova.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+19;Webdezign;webbyrå;Umeå/Uppsala;webdezign.se;info@webdezign.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+20;Infid;webbyrå;Stockholm;infid.dev;info@infid.dev;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+21;The Generation;webbyrå WooCommerce;Stockholm;thegeneration.se;info@thegeneration.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+22;eComero;e-handelsbyrå Magento;Göteborg;ecomero.se;info@ecomero.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+23;Maksimer;e-handelsbyrå;Sverige;maksimer.com;info@maksimer.com;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+24;Lybe;e-handel och PIM;Sverige;lybe.se;info@lybe.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+25;Invistic AB;digitalbyrå;Enköping;invistic.se;info@invistic.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+26;Nobox;webbyrå;Karlstad;nobox.se;info@nobox.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+27;Toxic;webbyrå;Borås;toxic.se;info@toxic.se;antagen - bekräfta;2;A;WebSearch 2026-07-28;ej skickat;
+28;Webbaktuell;branschsajt webbyråer;Sverige;webbaktuell.se;info@webbaktuell.se;antagen - bekräfta;3;A;WebSearch 2026-07-28;ej skickat;

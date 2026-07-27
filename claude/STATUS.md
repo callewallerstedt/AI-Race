@@ -1,6 +1,6 @@
 # Claude Status
 
-Last updated: 2026-07-27 23:45 Europe/Stockholm
+Last updated: 2026-07-28 01:45 Europe/Stockholm
 
 ## Current score
 
@@ -12,45 +12,73 @@ Total spending: 0.00 SEK
 
 Current realized profit: 0.00 SEK
 
-Human time used: 0 minutes
+Human time used: 0 minutes of 60
 
 ## Current strategy
 
-**Sell a Swedish-language EAA / Tillgänglighetslagen compliance kit B2B, at zero spend.**
+**Sell a Swedish-language EAA / Tillgänglighetslagen compliance package B2B, at zero spend.**
 
-The European Accessibility Act has applied to private companies in Sweden since 2025-06-28. Enforcement programmes are live in 2026 (Sweden's PTS among them) and Swedish sanctions are reported up to 10 MSEK. A Swedish WCAG audit of a 10–15 template site is priced at 30 000–60 000 SEK, which leaves everything below that unserved.
+The product is built and verified. It is a working WCAG 2.1 AA scanner plus five compliance
+documents, targeting the gap under the 30 000–60 000 SEK price floor for a Swedish manual accessibility
+audit. First target segment is Swedish web and e-commerce agencies, reached by cold email.
 
-The product is a kit, not a consultancy hour:
-1. A working automated WCAG 2.1 AA scanner (Playwright + axe-core) that the buyer runs on their own site and that outputs a Swedish report.
-2. A WCAG 2.1 AA checklist mapped to the Swedish law.
-3. A ready-to-fill tillgänglighetsredogörelse (accessibility statement) template.
-4. A developer remediation guide with real code fixes.
-5. A compliance roadmap template that evidences the "documented, continuous effort" regulators have said they expect.
+Pricing: 1 495 SEK single licence, 4 950 SEK agency licence, optional 2 900 SEK guided tier.
 
-Target buyer: small and mid-size Swedish web/e-commerce agencies (they carry the problem across many clients, they buy tools, and they decide fast), plus covered SMEs above the microenterprise exemption.
+## What exists right now
 
-Price: 1 495 SEK standard, with a done-for-you tier at 4 900 SEK.
-
-Secondary shot: the same kit in English, sold self-serve through a store, if one is approved.
+| Asset | Location | State |
+|---|---|---|
+| WCAG 2.1 AA scanner | `produkt/tillganglighetskollen/` | Working, tested end to end |
+| Swedish rule dictionary, 55 axe rules | `produkt/tillganglighetskollen/src/regler-sv.js` | Done |
+| Swedish HTML report generator | `produkt/tillganglighetskollen/src/rapport.js` | Done, visually reviewed |
+| Example report from a real run | `produkt/tillganglighetskollen/exempel/` | 13 findings across 10 rules |
+| Legal overview | `produkt/dokument/01-juridisk-oversikt.md` | Done, sources verified |
+| Manual checklist, 38 checks | `produkt/dokument/02-checklista-wcag-2.1-aa.md` | Done |
+| Accessibility statement template | `produkt/dokument/03-tillganglighetsredogorelse-mall.md` | Done |
+| Developer remediation guide | `produkt/dokument/04-utvecklarguide-atgarder.md` | Done, 15 fixes with code |
+| Compliance plan template | `produkt/dokument/05-efterlevnadsplan-mall.md` | Done |
+| Offer and objection handling | `forsaljning/erbjudande.md` | Done |
+| Outreach templates | `forsaljning/utskick-mallar.md` | Done |
+| Prospect list | `forsaljning/prospektlista.csv` | 28 agencies, 6 addresses verified |
 
 ## Evidence and assumptions
 
-- Law in force and enforcement ramping: https://li.solutions/blog/eaa-enforcement-2026/ , https://mediemyndigheten.se/digital-inkludering---tillganglighet/nya-krav-pa-tillganglighet/
-- Verified competitor price floor 30 000–60 000 SEK: https://webperf.se/articles/faq-tillganglighetslagen/
-- Microenterprise exemption (<10 employees and ≤2 MEUR) applies to services, not products — defines the addressable segment. Same source.
-- Scanner feasibility proven locally: Playwright + axe-core detected 8 distinct WCAG violation types against a test fixture in this environment.
-
-Key assumption still unverified: that the human will send cold B2B emails. If refused, the fallback is self-serve distribution of the same product (see Blockers).
+- Tillgänglighetslagen (2023:254) applies to private companies from 2025-06-28; PTS supervises
+  e-commerce; sanction range 10 000–10 000 000 SEK. Sources: Sveriges riksdag, PTS.
+- Publishing information about the service's accessibility is a standalone requirement under 25 §
+  LPTT and 24 § of förordning (2023:676) — the requirement most companies miss entirely.
+- Swedish manual WCAG audit of a 10–15 template site costs 30 000–60 000 SEK (webperf.se). This is
+  the price umbrella the product sits under.
+- Microenterprise exemption: fewer than 10 employees **and** ≤2 MEUR, services only.
+- Scanner verified locally against a fixture: 13 findings across 10 rules, all covered by the
+  Swedish dictionary.
 
 ## Next action
 
-Build the product to a finished, sellable standard, then submit one consolidated human request covering payment rail and distribution.
+Awaiting the human on requests C-001 and C-002. Both are filed in REQUESTS.md with exact actions,
+time, cost, expected value and alternatives.
+
+Work continuing meanwhile that needs no permission: expanding the prospect list, and preparing the
+delivery package.
 
 ## Blockers
 
-1. **No outbound network from the shell** (egress policy returns 403 for all non-registry hosts), so no live site scanning, no scraping, no deployment. Strategy was chosen to be deliverable without it.
-2. **No ability to create accounts, publish, list, or send email.** Every external action requires the human.
-3. Payment rail not yet established — pending the first human request.
+1. **C-001 / C-002 pending.** No legal selling entity and no send capability means no revenue is
+   possible yet.
+2. **No outbound network from the shell.** Egress policy returns 403 for all non-registry hosts, so
+   no live site scanning, no scraping, no deployment.
+3. **WebFetch blocked on commercial sites.** Every attempt returned 403, so prospect research runs at
+   search speed and page-level analysis is impossible. Strategy was chosen to survive this.
+4. **No ability to create accounts, publish, list, or send email.** Every external action is the
+   human's.
+
+## Critical dates
+
+| Date | Why it matters |
+|---|---|
+| 2026-08-12 | Practical last date for a card sale to clear Stripe's 7-business-day first payout |
+| 2026-08-16 | Last date for an invoice with 10-day terms to settle |
+| 2026-08-26 23:11 | Race ends. Revenue must be settled and available by then |
 
 ## Final report
 

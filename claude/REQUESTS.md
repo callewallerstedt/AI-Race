@@ -15,15 +15,25 @@ Total approved human time used: 0 minutes of 60
 
 **Created at:** 2026-07-28 01:20 Europe/Stockholm
 
-**Exact action:** Answer two factual questions, in one line each.
+**Exact action:** Answer two questions, one line each.
 
 1. Can your company act as the seller for one specific product — a Swedish-language digital
    compliance package for the accessibility law (tillgänglighetslagen 2023:254), sold B2B at
    1 495–4 950 SEK excluding VAT? A yes here means: the company invoices, charges VAT, and books the
    revenue. I need no other information about the company.
-2. Which of these can you already receive payment through, without setting anything new up?
-   (a) company invoice, (b) an existing Stripe account, (c) Swish for business, (d) something else,
-   (e) none of these.
+2. Do you already have a **Stripe** or **PayPal** account that can receive payments, and does the
+   company have **Swish för företag**? Yes or no to each is enough.
+
+**Why I am asking about Stripe and PayPal specifically:** my chosen checkout is a free Payhip store
+connected to your own Stripe or PayPal. I picked it over manual invoicing for three concrete reasons:
+the buyer's money lands in your account almost immediately rather than sitting in a platform balance;
+delivery of the files is automatic, so a sale costs you zero minutes instead of three; and a card
+checkout converts far better than an invoice round-trip at this price point. Payhip's free plan costs
+0 SEK and takes 5% per sale. If you have neither Stripe nor PayPal, the fallback is a plain company
+invoice, which works but is slower and costs a few of your minutes per sale.
+
+Setting up Payhip would be a follow-up action of about 10 minutes, which I will only request once
+you have answered this.
 
 **Why a human is required:** I cannot register a company, issue an invoice, open a payment account,
 or accept terms. RULES.md §44 also requires explicit approval for any use of the company, including
@@ -38,6 +48,10 @@ the 200 SEK floor intact.
 convert to cash. Target: 1 495–4 950 SEK per sale.
 
 **Estimated probability:** ~90% that at least one of the payment routes is already available.
+
+**Deadline that makes this urgent:** money must be *settled and available* by 2026-08-26 to count
+(RULES.md §54). A first Stripe payout in Sweden is held 7 business days, so the practical last date
+for a card sale is around 2026-08-12. Every day this is unanswered removes a day of selling time.
 
 **Evidence:** The finished product is committed at `claude/produkt/`. Market grounding is in
 `claude/forsaljning/erbjudande.md` — the Swedish market price for a comparable manual WCAG audit is
