@@ -1,6 +1,6 @@
 # Grok Status
 
-Last updated: Not started
+Last updated: 2026-07-27 23:30 Europe/Stockholm
 
 ## Current score
 
@@ -16,19 +16,35 @@ Human time used: 0 minutes
 
 ## Current strategy
 
-Not selected.
+**Primary:** Productized Swedish web micro-services at fixed prices (499 / 999 / 1799 SEK), paid preferably via Frilans Finans Swish/invoice for fast settlement.
+
+**Secondary:** Digital product `Svensk Frilans Ekonomi Pack` at 149 SEK, sold on a fast-settlement storefront (Payhip preferred; Gumroad avoided as primary rail due to holds/review/minimum).
+
+**Capital policy:** Spend 0 SEK until a purchase has clear positive expected value and explicit approval.
 
 ## Evidence and assumptions
 
-None yet.
+- Compared five opportunities in `research/opportunities.md` with 2026 sources (Gumroad payout rules, Fiverr clearance, Frilans Finans, Etsy fees, affiliate lag, BFN Excel bookkeeping limit).
+- Assumption: one settled 999 SEK job beats a long tail of unpromoted digital downloads for this 30-day window.
+- Assumption: human can create payment + hosting accounts; AI delivers all build work.
+- Risk: without public URLs and payment rails, revenue cannot settle. First blocker is human publish/payment setup — not product quality.
 
 ## Next action
 
-Wait for the race status to become active.
+Await human decision on Request **R001** (host demos + open Payhip listing) and **R002** (Frilans Finans account). Meanwhile continue lead-pack preparation and any zero-cost improvements inside `grok/`.
 
 ## Blockers
 
-Race not started.
+1. Need human identity to publish demos on a free host.
+2. Need human to create seller/payment accounts (Payhip and/or Frilans Finans).
+3. Need approval before any outreach is sent.
+
+## Assets ready
+
+- `product/Svensk-Frilans-Ekonomi-Pack.xlsx` + sales copy
+- `portfolio/` demos + fee calculator lead magnet
+- `service/OFFER.md` + customer one-pager
+- `outreach/drafts.md`
 
 ## Final report
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nordljus Atelier — demo landing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a1a17;
+      --paper: #f4efe6;
+      --accent: #c45c26;
+      --muted: #5c574e;
+      --line: rgba(26, 26, 23, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Source Sans 3", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #ffe8d2 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #d9e5df 0%, transparent 50%),
+        var(--paper);
+      min-height: 100vh;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 1.25rem 1.25rem 4rem; }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.5rem 0 1.5rem; border-bottom: 1px solid var(--line);
+    }
+    .brand {
+      font-family: Fraunces, serif; font-weight: 700; font-size: 1.35rem; letter-spacing: -0.02em;
+    }
+    nav a { color: var(--muted); text-decoration: none; margin-left: 1.25rem; font-weight: 600; font-size: 0.95rem; }
+    .hero {
+      display: grid; gap: 1.5rem; padding: 3.5rem 0 2.5rem;
+    }
+    @media (min-width: 860px) {
+      .hero { grid-template-columns: 1.1fr 0.9fr; align-items: end; min-height: 70vh; }
+    }
+    h1 {
+      font-family: Fraunces, serif; font-size: clamp(2.4rem, 6vw, 4.4rem);
+      line-height: 0.95; margin: 0 0 1rem; letter-spacing: -0.03em;
+    }
+    .lede { font-size: 1.15rem; color: var(--muted); max-width: 34ch; margin: 0 0 1.5rem; }
+    .cta {
+      display: inline-block; background: var(--ink); color: var(--paper);
+      padding: 0.9rem 1.3rem; text-decoration: none; font-weight: 600; border-radius: 2px;
+    }
+    .cta.secondary { background: transparent; color: var(--ink); border: 1px solid var(--ink); margin-left: 0.6rem; }
+    .visual {
+      min-height: 320px; border-radius: 2px;
+      background:
+        linear-gradient(160deg, rgba(26,26,23,0.15), rgba(196,92,38,0.25)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 40 40'%3E%3Cg fill='%23c45c26' fill-opacity='0.12'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(135deg, #b7c7b0, #e8d5c0 55%, #f0c9a8);
+      box-shadow: 0 30px 60px rgba(26,26,23,0.12);
+      animation: rise 900ms ease both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: none; }
+    }
+    .hero-copy { animation: rise 700ms ease both; }
+    .section { padding: 3rem 0 1rem; border-top: 1px solid var(--line); }
+    .section h2 { font-family: Fraunces, serif; font-size: 1.8rem; margin: 0 0 0.6rem; }
+    .section p { color: var(--muted); max-width: 60ch; }
+    .demo-banner {
+      position: fixed; left: 0; right: 0; bottom: 0; background: var(--ink); color: var(--paper);
+      font-size: 0.85rem; padding: 0.55rem 1rem; text-align: center; z-index: 20;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="brand">Nordljus Atelier</div>
+      <div>
+        <a href="#arbete">Arbete</a>
+        <a href="#boka">Boka</a>
+      </div>
+    </nav>
+    <header class="hero">
+      <div class="hero-copy">
+        <h1>Ljus för rum som ska kännas levande.</h1>
+        <p class="lede">Skandinavisk belysningsstudio. En sida. Ett erbjudande. En tydlig nästa steg.</p>
+        <a class="cta" href="#boka">Boka konsultation</a>
+        <a class="cta secondary" href="#arbete">Se urval</a>
+      </div>
+      <div class="visual" role="img" aria-label="Abstrakt ljusgradient"></div>
+    </header>
+    <section class="section" id="arbete">
+      <h2>Urval</h2>
+      <p>Demo-sida byggd som portfoliexempel för produktiserad landningssidetjänst. Visar hero, typografi, atmosfär och en enda CTA-grupp.</p>
+    </section>
+    <section class="section" id="boka">
+      <h2>Boka</h2>
+      <p>I skarp leverans kopplas formulär eller bokningslänk hit. Den här demon är statisk.</p>
+    </section>
+  </div>
+  <div class="demo-banner">DEMO — Grok AI Race portfolio sample · not a live business</div>
+</body>
+</html>
