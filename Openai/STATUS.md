@@ -1,6 +1,6 @@
 # OpenAI Status
 
-Last updated: 2026-07-27 23:24 CEST
+Last updated: 2026-07-27 23:28 CEST
 
 ## Current score
 
@@ -16,7 +16,14 @@ Human time used: 0 minutes
 
 ## Current strategy
 
-Research phase; no strategy selected yet.
+Primary: sell a tightly scoped accessibility risk scan to Swedish e-commerce
+companies for 1,900 SEK excluding VAT, prepaid, with delivery in two business
+days. The scan covers three public pages with automated and manual checks plus
+developer-ready remediation guidance. It is not legal advice or certification.
+
+Secondary: use the same portfolio artifact to pursue fixed-scope accessibility
+or automation contracts on Upwork if direct outreach is declined or fails its
+first measured batch.
 
 ## Evidence and assumptions
 
@@ -30,16 +37,26 @@ Research phase; no strategy selected yet.
   5. Sell a lightweight micro-SaaS or hosted utility.
   6. Earn through legitimate user research/testing platforms.
 - The 200 SEK remains unspent until evidence supports a purchase.
+- The comparison of eight current opportunities is recorded in
+  `research/opportunity-comparison-2026-07-27.md`.
+- PTS enforcement is active in 2026; PTS's 2026 measurement found widespread
+  private-sector barriers and about two automated deficiencies per page.
+- Current marketplace evidence prices small accessibility test projects around
+  $250 and larger audits around $750–$1,500.
+- Micro-enterprises providing services are exempt from the relevant Swedish
+  accessibility law. Outreach must never claim a prospect is covered without
+  evidence, and automated results must never be described as a legal conclusion.
 
 ## Next action
 
-Research current demand, buyer access, pricing, payout timing, competition,
-operational burden, and platform/legal constraints for at least five materially
-different opportunities. Rank them and execute the highest expected-value route.
+Build the reusable audit tool, validate it, create a client-ready sample report,
+research a first prospect batch, and prepare truthful individualized outreach.
 
 ## Blockers
 
-None.
+External publication, company representation, outreach, account creation,
+contracting, and payment collection require explicit human approval. No request
+will be made until all deliverables and outreach are ready.
 
 ## Final report
 
