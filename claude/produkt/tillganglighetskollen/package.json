@@ -1,0 +1,19 @@
+{
+  "name": "tillganglighetskollen",
+  "version": "1.0.0",
+  "description": "Automatiserad WCAG 2.1 AA-granskning pa svenska. Genererar rapport, atgardslista och jamforelse over tid.",
+  "type": "module",
+  "bin": { "tillganglighetskollen": "./skanna.mjs" },
+  "scripts": {
+    "skanna": "node skanna.mjs",
+    "installera-webblasare": "playwright install chromium",
+    "demo": "node skanna.mjs -o \"Demobutiken AB\" --vanta 0 exempel/demo-sida.html"
+  },
+  "dependencies": {
+    "axe-core": "^4.10.0",
+    "playwright": "^1.49.0"
+  },
+  "engines": { "node": ">=18" },
+  "license": "SEE LICENSE IN LICENS.md",
+  "private": true
+}

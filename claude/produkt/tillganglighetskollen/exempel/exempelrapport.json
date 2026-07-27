@@ -1,0 +1,103 @@
+{
+  "verktyg": "Tillganglighetskollen",
+  "version": "1.0.0",
+  "datum": "27 juli 2026",
+  "organisation": "Demobutiken AB",
+  "antalSidor": 1,
+  "totaltAntalFel": 13,
+  "fordelning": {
+    "critical": 4,
+    "serious": 8,
+    "moderate": 1,
+    "minor": 0
+  },
+  "regler": [
+    {
+      "id": "image-alt",
+      "allvarlighet": "critical",
+      "antalElement": 2,
+      "sidor": [
+        "file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html"
+      ]
+    },
+    {
+      "id": "button-name",
+      "allvarlighet": "critical",
+      "antalElement": 1,
+      "sidor": [
+        "file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html"
+      ]
+    },
+    {
+      "id": "select-name",
+      "allvarlighet": "critical",
+      "antalElement": 1,
+      "sidor": [
+        "file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html"
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "allvarlighet": "serious",
+      "antalElement": 2,
+      "sidor": [
+        "file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html"
+      ]
+    },
+    {
+      "id": "link-name",
+      "allvarlighet": "serious",
+      "antalElement": 2,
+      "sidor": [
+        "file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html"
+      ]
+    },
+    {
+      "id": "autocomplete-valid",
+      "allvarlighet": "serious",
+      "antalElement": 1,
+      "sidor": [
+        "file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html"
+      ]
+    },
+    {
+      "id": "document-title",
+      "allvarlighet": "serious",
+      "antalElement": 1,
+      "sidor": [
+        "file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html"
+      ]
+    },
+    {
+      "id": "frame-title",
+      "allvarlighet": "serious",
+      "antalElement": 1,
+      "sidor": [
+        "file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html"
+      ]
+    },
+    {
+      "id": "html-has-lang",
+      "allvarlighet": "serious",
+      "antalElement": 1,
+      "sidor": [
+        "file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html"
+      ]
+    },
+    {
+      "id": "meta-viewport",
+      "allvarlighet": "moderate",
+      "antalElement": 1,
+      "sidor": [
+        "file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html"
+      ]
+    }
+  ],
+  "sidor": [
+    {
+      "url": "file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html",
+      "fel": null,
+      "antalFel": 13
+    }
+  ]
+}

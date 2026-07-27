@@ -1,0 +1,8 @@
+node_modules/
+package-lock.json
+rapport.html
+rapport.json
+rapport.csv
+matning-*.html
+matning-*.json
+matning-*.csv

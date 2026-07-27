@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tillgänglighetsrapport – Demobutiken AB</title>
+<style>
+  :root{--txt:#16191d;--dim:#5b6470;--linje:#dfe3e8;--bg:#fff;--panel:#f6f7f9;--blaa:#12457a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:940px;margin:0 auto;padding:48px 28px 80px}
+  header.topp{border-bottom:3px solid var(--blaa);padding-bottom:22px;margin-bottom:34px}
+  header.topp h1{margin:0 0 6px;font-size:30px;letter-spacing:-.4px}
+  header.topp .org{font-size:19px;color:var(--blaa);font-weight:600}
+  header.topp .datum{color:var(--dim);font-size:14px;margin-top:8px}
+  h2{font-size:21px;margin:44px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--linje)}
+  h3{font-size:17px;margin:0 0 6px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .kort{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:22px 0}
+  .kort div{background:var(--panel);border:1px solid var(--linje);border-radius:8px;padding:14px}
+  .kort .n{font-size:27px;font-weight:700;line-height:1.1}
+  .kort .e{font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.6px;margin-top:4px}
+  .bar{display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--panel);margin:8px 0 6px}
+  .bar .seg{display:block}
+  .legend{font-size:12.5px;color:var(--dim);display:flex;gap:16px;flex-wrap:wrap}
+  .legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;margin:14px 0}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--linje);vertical-align:top}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--dim)}
+  td.num,th.num{text-align:right;white-space:nowrap}
+  .pill{font-size:11px;font-weight:700;padding:2px 8px;border-radius:11px;white-space:nowrap;color:#fff}
+  .pill.critical{background:#b3261e}.pill.serious{background:#c2670a}
+  .pill.moderate{background:#8a6d00}.pill.minor{background:#4a5568}
+  .regel{border:1px solid var(--linje);border-radius:9px;padding:18px 20px;margin:16px 0;background:#fff;break-inside:avoid}
+  .regel .idx{background:var(--blaa);color:#fff;width:24px;height:24px;border-radius:50%;
+              display:inline-flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700;flex:none}
+  .meta{font-size:12.5px;color:var(--dim);margin-bottom:9px}
+  .wcag{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+  .wcag span{background:#e8f0fa;color:var(--blaa);font-size:11.5px;padding:3px 9px;border-radius:4px;font-weight:600}
+  .txt{margin:7px 0}
+  .atgard{background:#eef7ee;border-left:3px solid #2e7d32;padding:11px 14px;border-radius:0 6px 6px 0;margin:12px 0 6px}
+  .notis{background:#fff8e6;border-left:3px solid #b8860b;padding:11px 14px;border-radius:0 6px 6px 0;margin:12px 0;font-size:14.5px}
+  .jamfor{padding:12px 15px;border-radius:7px;margin:18px 0;font-size:14.5px}
+  .jamfor.bra{background:#eef7ee;border-left:3px solid #2e7d32}
+  .jamfor.daligt{background:#fdecea;border-left:3px solid #b3261e}
+  details{margin-top:12px}
+  summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--blaa)}
+  .sidblock{margin:12px 0 0;padding-left:2px}
+  .sidrubrik{font-size:13px;font-weight:600;word-break:break-all;margin-bottom:5px}
+  .mini{font-size:12px;color:var(--dim);font-weight:400}
+  ul.noder{list-style:none;padding:0;margin:0}
+  ul.noder li{margin:0 0 10px}
+  code.sel{font-size:12px;background:var(--panel);padding:2px 6px;border-radius:4px;word-break:break-all}
+  pre{background:#1e2228;color:#e6edf3;padding:9px 11px;border-radius:6px;overflow-x:auto;
+      font-size:12px;line-height:1.5;margin:5px 0 0;white-space:pre-wrap;word-break:break-word}
+  .scope{background:var(--panel);border:1px solid var(--linje);border-radius:9px;padding:18px 20px;margin:26px 0;font-size:14.5px}
+  .scope ul{margin:9px 0 0;padding-left:20px}
+  footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--linje);font-size:12.5px;color:var(--dim)}
+  @media print{
+    .wrap{max-width:none;padding:0}
+    .regel{border-color:#ccc}
+    details{display:block}
+    details summary{display:none}
+    pre{color:#111;background:#f2f2f2;border:1px solid #ddd}
+    a{color:inherit;text-decoration:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="topp">
+  <div class="org">Demobutiken AB</div>
+  <h1>Tillgänglighetsgranskning enligt WCAG 2.1 AA</h1>
+  <div class="datum">Automatiserad granskning utförd 27 juli 2026 · 1 sida granskade · Tillgänglighetskollen 1.0.0 (axe-core 4.12.1)</div>
+</header>
+
+
+
+<h2>Sammanfattning</h2>
+
+<div class="kort">
+  <div><div class="n">13</div><div class="e">Fel totalt</div></div>
+  <div><div class="n">10</div><div class="e">Regler med fel</div></div>
+  <div><div class="n">12</div><div class="e">Kritiska/allvarliga</div></div>
+  <div><div class="n">1/1</div><div class="e">Sidor med fel</div></div>
+</div>
+
+<div class="bar"><span class="seg" style="width:30.77%;background:#b3261e" title="Kritisk: 4"></span><span class="seg" style="width:61.54%;background:#c2670a" title="Allvarlig: 8"></span><span class="seg" style="width:7.69%;background:#8a6d00" title="Måttlig: 1"></span></div>
+<div class="legend">
+  <span><i style="background:#b3261e"></i>Kritisk 4</span>
+  <span><i style="background:#c2670a"></i>Allvarlig 8</span>
+  <span><i style="background:#8a6d00"></i>Måttlig 1</span>
+  <span><i style="background:#4a5568"></i>Mindre 0</span>
+</div>
+
+
+
+<div class="scope">
+  <strong>Vad den här granskningen täcker – och vad den inte täcker</strong>
+  <p style="margin:9px 0 0">Rapporten bygger på automatiserad testning med axe-core. Automatiserade tester hittar
+  tillförlitligt de maskinellt kontrollerbara kraven, men de kan inte bedöma allt i WCAG 2.1 AA. Branschens
+  vedertagna uppskattning är att automatiserad testning fångar ungefär en tredjedel av kriterierna.</p>
+  <ul>
+    <li><strong>Täcks:</strong> textalternativ, formuläretiketter, färgkontrast, språkattribut, ARIA-fel, rubrikstruktur, landmärken och tabellstruktur.</li>
+    <li><strong>Täcks inte:</strong> om alt-texten faktiskt beskriver rätt sak, logisk tabbordning, synlig fokusmarkering i praktiken, korrekt felhantering i formulär, undertexternas kvalitet, och om hela köpflödet går att genomföra med enbart tangentbord.</li>
+  </ul>
+  <p style="margin:9px 0 0">Åtgärda punkterna nedan först. De är konkreta, verifierbara och utgör den största delen
+  av de fel som faktiskt stoppar användare. Komplettera därefter med manuell granskning enligt den medföljande
+  checklistan.</p>
+</div>
+
+<h2>Prioriterad åtgärdslista</h2>
+<p class="txt">Sorterad efter allvarlighetsgrad och därefter efter antal berörda element. Fel som återkommer på
+många sidor ligger nästan alltid i en gemensam mall – en enda rättning löser då samtliga förekomster.</p>
+<table>
+  <thead><tr><th class="num">#</th><th>Problem</th><th>Grad</th><th class="num">Element</th><th class="num">Sidor</th></tr></thead>
+  <tbody><tr>
+      <td class="num">1</td>
+      <td><strong>Bild saknar alt-text</strong><div class="mini">image-alt</div></td>
+      <td><span class="pill critical">Kritisk</span></td>
+      <td class="num">2</td>
+      <td class="num">1</td>
+    </tr><tr>
+      <td class="num">2</td>
+      <td><strong>Knapp utan text</strong><div class="mini">button-name</div></td>
+      <td><span class="pill critical">Kritisk</span></td>
+      <td class="num">1</td>
+      <td class="num">1</td>
+    </tr><tr>
+      <td class="num">3</td>
+      <td><strong>Rullgardinsmeny saknar etikett</strong><div class="mini">select-name</div></td>
+      <td><span class="pill critical">Kritisk</span></td>
+      <td class="num">1</td>
+      <td class="num">1</td>
+    </tr><tr>
+      <td class="num">4</td>
+      <td><strong>För låg kontrast mellan text och bakgrund</strong><div class="mini">color-contrast</div></td>
+      <td><span class="pill serious">Allvarlig</span></td>
+      <td class="num">2</td>
+      <td class="num">1</td>
+    </tr><tr>
+      <td class="num">5</td>
+      <td><strong>Länk utan text</strong><div class="mini">link-name</div></td>
+      <td><span class="pill serious">Allvarlig</span></td>
+      <td class="num">2</td>
+      <td class="num">1</td>
+    </tr><tr>
+      <td class="num">6</td>
+      <td><strong>Felaktigt autocomplete-värde</strong><div class="mini">autocomplete-valid</div></td>
+      <td><span class="pill serious">Allvarlig</span></td>
+      <td class="num">1</td>
+      <td class="num">1</td>
+    </tr><tr>
+      <td class="num">7</td>
+      <td><strong>Sidan saknar titel</strong><div class="mini">document-title</div></td>
+      <td><span class="pill serious">Allvarlig</span></td>
+      <td class="num">1</td>
+      <td class="num">1</td>
+    </tr><tr>
+      <td class="num">8</td>
+      <td><strong>&lt;iframe&gt; saknar titel</strong><div class="mini">frame-title</div></td>
+      <td><span class="pill serious">Allvarlig</span></td>
+      <td class="num">1</td>
+      <td class="num">1</td>
+    </tr><tr>
+      <td class="num">9</td>
+      <td><strong>Språk saknas på sidan</strong><div class="mini">html-has-lang</div></td>
+      <td><span class="pill serious">Allvarlig</span></td>
+      <td class="num">1</td>
+      <td class="num">1</td>
+    </tr><tr>
+      <td class="num">10</td>
+      <td><strong>Zoom är blockerad</strong><div class="mini">meta-viewport</div></td>
+      <td><span class="pill moderate">Måttlig</span></td>
+      <td class="num">1</td>
+      <td class="num">1</td>
+    </tr></tbody>
+</table>
+
+<h2>Alla fel i detalj</h2>
+<section class="regel" id="regel-image-alt">
+    <h3><span class="idx">1</span> Bild saknar alt-text <span class="pill critical">Kritisk</span></h3>
+    <div class="meta">Regel-id <code>image-alt</code> · 2 element på 1 sida</div>
+    <div class="wcag"><span>1.1.1 Innehåll som inte är text</span></div>
+    
+    <p class="txt"><strong>Vad är fel:</strong> &lt;img&gt; saknar attributet alt.</p>
+    <p class="txt"><strong>Konsekvens:</strong> Skärmläsaren läser upp filnamnet. På en produktsida betyder det att kunden hör &quot;IMG_20841.jpg&quot; i stället för vad varan är.</p>
+    <div class="atgard"><strong>Så åtgärdar ni det:</strong> Beskriv vad bilden förmedlar, till exempel alt=&quot;Blå damkappa i ull, knälång&quot;. Är bilden rent dekorativ ska den ha tomt alt=&quot;&quot;. Utelämna aldrig attributet helt.</div>
+    <details><summary>Berörda element (2)</summary><div class="sidblock">
+        <div class="sidrubrik">file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html <span class="mini">2 element</span></div>
+        <ul class="noder"><li><code class="sel">img[src$=&quot;produkt-8841.jpg&quot;]</code><pre>&lt;img src=&quot;produkt-8841.jpg&quot; width=&quot;120&quot;&gt;</pre></li><li><code class="sel">img[src$=&quot;produkt-8842.jpg&quot;]</code><pre>&lt;img src=&quot;produkt-8842.jpg&quot; width=&quot;120&quot;&gt;</pre></li></ul>
+      </div></details>
+  </section><section class="regel" id="regel-button-name">
+    <h3><span class="idx">2</span> Knapp utan text <span class="pill critical">Kritisk</span></h3>
+    <div class="meta">Regel-id <code>button-name</code> · 1 element på 1 sida</div>
+    <div class="wcag"><span>4.1.2 Namn, roll, värde</span></div>
+    
+    <p class="txt"><strong>Vad är fel:</strong> En &lt;button&gt; saknar tillgängligt namn. Vanligast när knappen bara innehåller en ikon.</p>
+    <p class="txt"><strong>Konsekvens:</strong> Skärmläsaren säger bara &quot;knapp&quot;. Användaren måste gissa vad som händer.</p>
+    <div class="atgard"><strong>Så åtgärdar ni det:</strong> Lägg till dold text, till exempel &lt;span class=&quot;visually-hidden&quot;&gt;Sök&lt;/span&gt;, eller aria-label=&quot;Sök&quot;. Själva ikonen ska ha aria-hidden=&quot;true&quot;.</div>
+    <details><summary>Berörda element (1)</summary><div class="sidblock">
+        <div class="sidrubrik">file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html <span class="mini">1 element</span></div>
+        <ul class="noder"><li><code class="sel">.liten</code><pre>&lt;button class=&quot;knapp liten&quot;&gt;&lt;span class=&quot;ikon&quot;&gt;&lt;/span&gt;&lt;/button&gt;</pre></li></ul>
+      </div></details>
+  </section><section class="regel" id="regel-select-name">
+    <h3><span class="idx">3</span> Rullgardinsmeny saknar etikett <span class="pill critical">Kritisk</span></h3>
+    <div class="meta">Regel-id <code>select-name</code> · 1 element på 1 sida</div>
+    <div class="wcag"><span>4.1.2 Namn, roll, värde</span></div>
+    
+    <p class="txt"><strong>Vad är fel:</strong> &lt;select&gt; har ingen kopplad &lt;label&gt;.</p>
+    <p class="txt"><strong>Konsekvens:</strong> Användaren vet inte vad valet gäller, till exempel storlek eller antal i en kassa.</p>
+    <div class="atgard"><strong>Så åtgärdar ni det:</strong> Koppla en &lt;label for&gt;, eller sätt aria-label.</div>
+    <details><summary>Berörda element (1)</summary><div class="sidblock">
+        <div class="sidrubrik">file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html <span class="mini">1 element</span></div>
+        <ul class="noder"><li><code class="sel">select</code><pre>&lt;select&gt;&lt;option&gt;Välj storlek&lt;/option&gt;&lt;option&gt;S&lt;/option&gt;&lt;option&gt;M&lt;/option&gt;&lt;option&gt;L&lt;/option&gt;&lt;/select&gt;</pre></li></ul>
+      </div></details>
+  </section><section class="regel" id="regel-color-contrast">
+    <h3><span class="idx">4</span> För låg kontrast mellan text och bakgrund <span class="pill serious">Allvarlig</span></h3>
+    <div class="meta">Regel-id <code>color-contrast</code> · 2 element på 1 sida</div>
+    <div class="wcag"><span>1.4.3 Kontrast (minimum)</span></div>
+    
+    <p class="txt"><strong>Vad är fel:</strong> Kontrastförhållandet understiger 4,5:1 för brödtext eller 3:1 för stor text.</p>
+    <p class="txt"><strong>Konsekvens:</strong> Den enskilt vanligaste bristen på svenska webbplatser. Drabbar alla med nedsatt syn, äldre användare och alla som använder mobilen i solljus.</p>
+    <div class="atgard"><strong>Så åtgärdar ni det:</strong> Mörka ner textfärgen eller ljusa upp bakgrunden tills förhållandet når 4,5:1, eller 3:1 för text som är minst 24px eller 18,66px halvfet. Ljusgrå text på vitt underkänns nästan alltid.</div>
+    <details><summary>Berörda element (2)</summary><div class="sidblock">
+        <div class="sidrubrik">file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html <span class="mini">2 element</span></div>
+        <ul class="noder"><li><code class="sel">.inne &gt; .dampad</code><pre>&lt;p class=&quot;dampad&quot;&gt;Fri frakt över 499 kr. Öppet köp i 30 dagar.&lt;/p&gt;</pre></li><li><code class="sel">p:nth-child(11) &gt; .dampad</code><pre>&lt;span class=&quot;dampad&quot;&gt;© 2026 Demobutiken AB&lt;/span&gt;</pre></li></ul>
+      </div></details>
+  </section><section class="regel" id="regel-link-name">
+    <h3><span class="idx">5</span> Länk utan text <span class="pill serious">Allvarlig</span></h3>
+    <div class="meta">Regel-id <code>link-name</code> · 2 element på 1 sida</div>
+    <div class="wcag"><span>2.4.4 Syftet med en länk</span><span>4.1.2 Namn, roll, värde</span></div>
+    
+    <p class="txt"><strong>Vad är fel:</strong> En &lt;a&gt; saknar tillgängligt namn. Vanligt för ikonlänkar till sociala medier och för logotypen i sidhuvudet.</p>
+    <p class="txt"><strong>Konsekvens:</strong> Skärmläsaren läser upp webbadressen tecken för tecken, eller säger bara &quot;länk&quot;.</p>
+    <div class="atgard"><strong>Så åtgärdar ni det:</strong> Lägg till dold text eller aria-label=&quot;Till startsidan&quot;. Undvik &quot;läs mer&quot; som enda länktext.</div>
+    <details><summary>Berörda element (2)</summary><div class="sidblock">
+        <div class="sidrubrik">file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html <span class="mini">2 element</span></div>
+        <ul class="noder"><li><code class="sel">a[href=&quot;/&quot;]</code><pre>&lt;a href=&quot;/&quot;&gt;&lt;span class=&quot;ikon&quot;&gt;&lt;/span&gt;&lt;/a&gt;</pre></li><li><code class="sel">a[href=&quot;#&quot;]</code><pre>&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;</pre></li></ul>
+      </div></details>
+  </section><section class="regel" id="regel-autocomplete-valid">
+    <h3><span class="idx">6</span> Felaktigt autocomplete-värde <span class="pill serious">Allvarlig</span></h3>
+    <div class="meta">Regel-id <code>autocomplete-valid</code> · 1 element på 1 sida</div>
+    <div class="wcag"><span>1.3.5 Identifiera indatasyfte</span></div>
+    
+    <p class="txt"><strong>Vad är fel:</strong> Attributet autocomplete innehåller ett värde som inte är giltigt.</p>
+    <p class="txt"><strong>Konsekvens:</strong> Användare som är beroende av automatisk ifyllnad får ingen hjälp. Detta är ett uttryckligt AA-krav.</p>
+    <div class="atgard"><strong>Så åtgärdar ni det:</strong> Använd giltiga värden, till exempel autocomplete=&quot;given-name&quot;, &quot;email&quot;, &quot;postal-code&quot; eller &quot;tel&quot;.</div>
+    <details><summary>Berörda element (1)</summary><div class="sidblock">
+        <div class="sidrubrik">file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html <span class="mini">1 element</span></div>
+        <ul class="noder"><li><code class="sel">input[placeholder=&quot;Din e-postadress&quot;]</code><pre>&lt;input type=&quot;text&quot; placeholder=&quot;Din e-postadress&quot; autocomplete=&quot;e-mail&quot;&gt;</pre></li></ul>
+      </div></details>
+  </section><section class="regel" id="regel-document-title">
+    <h3><span class="idx">7</span> Sidan saknar titel <span class="pill serious">Allvarlig</span></h3>
+    <div class="meta">Regel-id <code>document-title</code> · 1 element på 1 sida</div>
+    <div class="wcag"><span>2.4.2 Sidan har en titel</span></div>
+    
+    <p class="txt"><strong>Vad är fel:</strong> &lt;title&gt; saknas eller är tom.</p>
+    <p class="txt"><strong>Konsekvens:</strong> Skärmläsaren läser upp titeln allra först. Utan den vet användaren inte vilken sida som öppnats, och flikar blir omöjliga att skilja åt.</p>
+    <div class="atgard"><strong>Så åtgärdar ni det:</strong> Ge varje sida en unik, beskrivande &lt;title&gt; med det viktigaste först, till exempel &quot;Kassa – Företaget AB&quot;.</div>
+    <details><summary>Berörda element (1)</summary><div class="sidblock">
+        <div class="sidrubrik">file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html <span class="mini">1 element</span></div>
+        <ul class="noder"><li><code class="sel">html</code><pre>&lt;html&gt;</pre></li></ul>
+      </div></details>
+  </section><section class="regel" id="regel-frame-title">
+    <h3><span class="idx">8</span> &lt;iframe&gt; saknar titel <span class="pill serious">Allvarlig</span></h3>
+    <div class="meta">Regel-id <code>frame-title</code> · 1 element på 1 sida</div>
+    <div class="wcag"><span>2.4.1 Hoppa över återkommande block</span><span>4.1.2 Namn, roll, värde</span></div>
+    
+    <p class="txt"><strong>Vad är fel:</strong> En inbäddad ram saknar attributet title.</p>
+    <p class="txt"><strong>Konsekvens:</strong> Skärmläsaren säger bara &quot;ram&quot;. Vanligt för inbäddade kartor, videor och betalfönster.</p>
+    <div class="atgard"><strong>Så åtgärdar ni det:</strong> Lägg till title som beskriver innehållet, till exempel title=&quot;Karta till butiken&quot;. Helt dekorativa ramar kan i stället döljas med aria-hidden.</div>
+    <details><summary>Berörda element (1)</summary><div class="sidblock">
+        <div class="sidrubrik">file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html <span class="mini">1 element</span></div>
+        <ul class="noder"><li><code class="sel">iframe</code><pre>&lt;iframe src=&quot;karta.html&quot; width=&quot;100%&quot; height=&quot;200&quot;&gt;&lt;/iframe&gt;</pre></li></ul>
+      </div></details>
+  </section><section class="regel" id="regel-html-has-lang">
+    <h3><span class="idx">9</span> Språk saknas på sidan <span class="pill serious">Allvarlig</span></h3>
+    <div class="meta">Regel-id <code>html-has-lang</code> · 1 element på 1 sida</div>
+    <div class="wcag"><span>3.1.1 Sidans språk</span></div>
+    
+    <p class="txt"><strong>Vad är fel:</strong> &lt;html&gt; saknar attributet lang.</p>
+    <p class="txt"><strong>Konsekvens:</strong> Skärmläsaren läser svensk text med engelskt uttal, vilket ofta blir helt obegripligt.</p>
+    <div class="atgard"><strong>Så åtgärdar ni det:</strong> Sätt &lt;html lang=&quot;sv&quot;&gt;. En enda rad med mycket stor effekt.</div>
+    <details><summary>Berörda element (1)</summary><div class="sidblock">
+        <div class="sidrubrik">file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html <span class="mini">1 element</span></div>
+        <ul class="noder"><li><code class="sel">html</code><pre>&lt;html&gt;</pre></li></ul>
+      </div></details>
+  </section><section class="regel" id="regel-meta-viewport">
+    <h3><span class="idx">10</span> Zoom är blockerad <span class="pill moderate">Måttlig</span></h3>
+    <div class="meta">Regel-id <code>meta-viewport</code> · 1 element på 1 sida</div>
+    <div class="wcag"><span>1.4.4 Ändring av textstorlek</span></div>
+    
+    <p class="txt"><strong>Vad är fel:</strong> Taggen viewport anger user-scalable=no eller maximum-scale under 2.</p>
+    <p class="txt"><strong>Konsekvens:</strong> Användare med nedsatt syn kan inte zooma på mobilen. Mycket vanligt och mycket lätt att åtgärda.</p>
+    <div class="atgard"><strong>Så åtgärdar ni det:</strong> Använd &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt; och ta bort user-scalable och maximum-scale.</div>
+    <details><summary>Berörda element (1)</summary><div class="sidblock">
+        <div class="sidrubrik">file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html <span class="mini">1 element</span></div>
+        <ul class="noder"><li><code class="sel">meta[name=&quot;viewport&quot;]</code><pre>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;</pre></li></ul>
+      </div></details>
+  </section>
+
+<h2>Resultat per sida</h2>
+<table>
+  <thead><tr><th>Sida</th><th class="num">Fel</th><th class="num">Regler</th></tr></thead>
+  <tbody>
+    <tr><td style="word-break:break-all">file:///home/user/AI-Race/claude/produkt/tillganglighetskollen/exempel/demo-sida.html</td><td class="num">13</td><td class="num">10</td></tr>
+  </tbody>
+</table>
+
+<h2>Metod</h2>
+<p class="txt">Varje sida öppnades i en verklig webbläsare, Chromium via Playwright, i fönsterstorleken som anges
+i rapporthuvudet. Sidan fick ladda klart, varefter axe-core 4.12.1)
+kördes mot det renderade DOM-trädet med regeluppsättningarna wcag2a, wcag2aa, wcag21a och wcag21aa. Endast
+faktiska fel redovisas; godkända och ofullständiga kontroller utelämnas.</p>
+<p class="txt">Granskningen kan köras om när som helst med samma kommando. Använd flaggan
+<code>--jamfor</code> mot en tidigare JSON-fil för att dokumentera utvecklingen över tid. Det är den typen av
+dokumenterat, fortlöpande arbete som tillsynsmyndigheter efterfrågar.</p>
+
+<footer>
+  Genererad av Tillgänglighetskollen 1.0.0 (axe-core 4.12.1). Rapporten är ett tekniskt underlag och utgör inte
+  juridisk rådgivning. Dokumentet innehåller inga externa resurser och kan arkiveras som det är.
+</footer>
+
+</div>
+</body>
+</html>
