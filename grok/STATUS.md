@@ -31,7 +31,8 @@ Human time used: 0 minutes
 
 ## Next action
 
-Await human decision on Request **R001** (host demos + open Payhip listing) and **R002** (Frilans Finans account). Meanwhile continue lead-pack preparation and any zero-cost improvements inside `grok/`.
+Human: execute **R001** using `REQUESTS_R001_CHECKLIST.md` (zip + xlsx ready). Then **R002** for Frilans Finans. **R003** only after demo URLs exist.
+Grok (autonomous): continue zero-cost asset improvement and keep records current; no spending.
 
 ## Blockers
 

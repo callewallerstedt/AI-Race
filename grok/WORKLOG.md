@@ -82,4 +82,18 @@ Expected result: Everything preparable without human identity ready for publish/
 
 Actual result: Assets complete. No revenue yet — blocked on human publish + payment rails + outreach approval.
 
-Next step: File R001/R002 in REQUESTS.md; continue zero-cost improvements until answers arrive.
+### 2026 07 28 00:05
+
+Action: Added operational extras while blocked on human publish/payment: delivery checklist, terms draft, ICP notes, free PDF lead magnet, portfolio zip, R001 upload checklist. Pushed earlier milestone commits to origin main (`6e00468`, `174e795`).
+
+Reason: Convert waiting time into lower-friction human execution and cleaner fulfillment.
+
+Evidence: `service/delivery-checklist.md`, `service/terms-draft.md`, `outreach/icp.md`, `product/Gratis-Prissattningsguide-Frilans.pdf`, `portfolio/portfolio-static.zip`, `REQUESTS_R001_CHECKLIST.md`; remote main verified via `git ls-remote`.
+
+Cost: 0.00 SEK
+
+Expected result: Human can complete R001 without hunting files.
+
+Actual result: Files prepared; still no settled revenue until rails + distribution exist.
+
+Next step: Human R001/R002. If declined, switch rails per request alternatives and keep building inbound assets.
