@@ -141,3 +141,63 @@ Cost: 0 SEK. The entire strategy is zero-spend, which protects the 200 SEK floor
 Expected result: primary revenue from B2B sales at 1 495–4 900 SEK; a single sale is worth more than every rejected path combined.
 
 Next step: build the product, then submit one consolidated, minimal human request.
+
+---
+
+### 2026 07 28 00:15
+
+Action: Built the product. `claude/produkt/` now contains a working scanner plus five documents.
+
+Reason: The strategy needs something genuinely worth paying for before any selling starts.
+
+Evidence: `claude/produkt/tillganglighetskollen/` — Playwright + axe-core scanner (`skanna.mjs`), a Swedish rule dictionary covering 55 axe rules with plain-language explanation, consequence, concrete fix and mapped WCAG criterion (`src/regler-sv.js`), and a self-contained HTML report generator (`src/rapport.js`). Documents in `claude/produkt/dokument/`: legal overview, 38-point manual checklist, accessibility-statement template, developer remediation guide with before/after code, and a compliance-plan template.
+
+Cost: 0 SEK.
+
+Actual result: Verified end to end, not assumed. Ran against a purpose-built demo page carrying the defects that actually recur on Swedish webshops; the tool found 13 failures across 10 rules (4 critical, 8 serious, 1 moderate) and every rule it hit was covered by the Swedish dictionary. Screenshotted the rendered report to check it visually.
+
+Two features exist specifically because of what the law rewards rather than what is easy to build:
+- `--jamfor` compares a run against a previous JSON and reports what was fixed and what regressed. Regulators have signalled they want documented, continuous effort, so evidence of movement over time is the thing worth selling.
+- The report leads with an explicit statement that automated testing covers roughly a third of WCAG 2.1 AA. That costs some persuasive force and buys the only thing that matters more — being the honest option in a category full of overlay widgets that promise compliance they cannot deliver.
+
+Failure worth recording: I first wrote the entire Swedish corpus without å, ä and ö. For a product sold to Swedish companies that is not cosmetic — it would have destroyed credibility on sight. Caught it during visual QA and rewrote the rule dictionary, report generator and CLI strings. Lesson: for a localised product, proofread in the target language before treating the build as done.
+
+Next step: build the go-to-market.
+
+---
+
+### 2026 07 28 01:10
+
+Action: Attempted to build a prospect list. Discovered a second hard constraint and adapted.
+
+Reason: The product is worthless without buyers, and I have no ability to publish or post.
+
+Evidence: `WebFetch` returned HTTP 403 on every commercial site attempted — adlibris.com, digg.se, webperf.se, solvd.se, sverigewebb.se. `WebSearch` works normally and does surface verified contact addresses directly in result summaries (info@webbkompaniet.se, info@webbproffs.se, info@lightweb.se, kontakt@intervaro.se).
+
+Cost: 0 SEK.
+
+Actual result: I cannot read arbitrary web pages, only search them. That kills any plan needing per-prospect page analysis, and it means list building runs at search speed rather than crawl speed. Twenty Swedish web agencies compiled so far in `claude/forsaljning/prospektlista.csv`, with each address marked as verified or still to be confirmed, so nothing gets sent on a guess.
+
+This also settled the choice of target. RULES.md §64 bars using the human's existing audience or personal brand, so posting to their network is out regardless. Cold outreach to strangers is the one direct channel the rules leave open.
+
+Segment chosen: Swedish web and digital agencies first, e-commerce companies second. Agencies are technical buyers who already understand WCAG, carry the problem across many clients, sit below any purchase-approval threshold at these prices, and can be reached at a general company address. The agency licence at 4 950 SEK is under four billable hours for them.
+
+Next step: submit the two blocking human requests.
+
+---
+
+### 2026 07 28 01:25
+
+Action: Wrote the sales assets and filed requests C-001 and C-002.
+
+Reason: Everything that can be done without the human is now done. What remains genuinely requires a person: a legal selling entity, and the physical act of sending email.
+
+Evidence: `claude/forsaljning/erbjudande.md` (offer, evidence-backed pricing, objection handling), `claude/forsaljning/utskick-mallar.md` (outreach templates and the rules each send must follow), `claude/forsaljning/prospektlista.csv`, `claude/REQUESTS.md` (C-001, C-002).
+
+Cost: 0 SEK. Spending remains at zero and the 200 SEK floor is intact.
+
+Pricing, with reasoning: 1 495 SEK for a single company, 4 950 SEK for an agency licence, optional 2 900 SEK guided tier. 1 495 sits below most companies' approval threshold so a developer or marketing lead can decide alone without an procurement process. The guided tier is deliberately designed around my constraint that I cannot reach their site — the customer runs the scan and sends me the JSON, and I return a remediation plan, a drafted accessibility statement and a filled compliance plan. That is honest about who does what, and still deliverable.
+
+Expected result: 15–25% chance of at least one sale across an 80-email campaign. I would rather state that plainly than inflate it.
+
+Next step: await the human. Meanwhile continue expanding the prospect list, which needs no permission.
