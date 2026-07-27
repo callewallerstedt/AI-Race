@@ -201,3 +201,64 @@ Pricing, with reasoning: 1 495 SEK for a single company, 4 950 SEK for an agency
 Expected result: 15–25% chance of at least one sale across an 80-email campaign. I would rather state that plainly than inflate it.
 
 Next step: await the human. Meanwhile continue expanding the prospect list, which needs no permission.
+
+---
+
+### 2026 07 28 02:05
+
+Action: Requests C-001 and C-002 answered. Recorded both, and rebuilt the payment side of the plan around the answer.
+
+Reason: One of the two answers invalidated a component I had already designed, so it had to be replaced rather than quietly kept.
+
+Evidence: `claude/REQUESTS.md` — C-001 and C-002 now marked APPROVED with the answers recorded verbatim.
+
+Cost: 0 SEK. Human time used: 2 minutes of 60.
+
+Actual result:
+1. **Company approved as seller.** The 1 495 / 4 950 SEK B2B price points survive.
+2. **No Stripe, no PayPal, no Swish for business. Invoice only.** This kills the Payhip self-serve checkout outright — Payhip pays out only into a seller's own Stripe or PayPal, and neither exists. Deleted from the plan rather than left as an aspiration.
+3. **Cold outreach approved**, with me preparing Gmail drafts and the human pressing send.
+
+The consequence I care about most is the deadline moving. An unpaid invoice is worth zero under RULES.md §82, so cash must actually arrive by 2026-08-26. With 10-day terms plus bank days, **the last safe order date is about 14 August** — twelve days earlier than the race end. Orders after that must be prepaid. This is now the governing date.
+
+Second consequence: invoice-only means roughly three human minutes per sale instead of zero. I offset that by building a generator rather than accepting the cost.
+
+Next step: eliminate the per-sale overhead, then get the campaign ready.
+
+---
+
+### 2026 07 28 02:30
+
+Action: Built the invoicing and delivery machinery, and verified the customer experience end to end.
+
+Reason: With invoice-only selling, every unautomated step is a permanent tax on a 60-minute human budget. Automating it once is cheap; paying it per order is not.
+
+Evidence and results:
+- `claude/forsaljning/faktura/skapa-faktura.mjs` — takes buyer details on the command line and emits a finished Swedish invoice: correct 25% VAT, EU reverse charge with the article 196 reference via `--eu`, running invoice numbers, due dates, prepayment mode via `--forskott`. Tested for domestic VAT (4 950 → 6 187,50 kr) and reverse charge (4 395 kr, 0 VAT). Rendered and inspected visually.
+- Seller company details live in a **gitignored** `saljare.json`. Organisation number, VAT number, address and bankgiro never enter this repository, satisfying RULES.md §45 and §101. I deliberately did not ask for those details at all.
+- `claude/produkt/LICENS.md` — licence terms for both tiers, third-party licences for axe-core (MPL 2.0) and Playwright (Apache 2.0), and a liability section that repeats the one-third coverage limit so the buyer cannot claim they were led to believe otherwise.
+- `claude/forsaljning/bygg-leverans.sh` — builds the customer ZIP. 56 KB, small enough to attach to an email.
+
+Verification, done as a customer rather than as the author: extracted the ZIP into a clean directory, ran `npm install`, ran the scanner. It found the same 13 failures. Then I edited the demo page to fix three defects — added `lang="sv"`, two alt texts and a `<title>` — and re-ran with `--jamfor`. The report correctly showed **13 → 9 fel (-4, förbättring)** and named exactly the three rules that had been fully resolved: `image-alt`, `document-title`, `html-has-lang`.
+
+That comparison feature is the main thing being sold, since documented progress over time is what the tillsyn asks for. It is now proven rather than claimed.
+
+Cost: 0 SEK. Spending remains zero; the 200 SEK floor is untouched.
+
+Next step: prospect list to 40, then the sender identity needed to write the emails.
+
+---
+
+### 2026 07 28 02:45
+
+Action: Prospect list expanded to 40 Swedish web and e-commerce agencies. Filed request C-003.
+
+Evidence: `claude/forsaljning/prospektlista.csv` — 40 organisations, 6 with addresses verified directly in search results, the rest with `info@`-pattern addresses marked `antagen - bekräfta` so nothing is sent on an unmarked guess. Batch 1 is the six verified ones.
+
+One entry deliberately demoted: a verified but personal address (`nils@sunbird.se`) is marked "använd ej i batch 1". Sending to a named individual moves the message out of pure B2B and into unnecessary personal-data processing, so the company address is used instead even though the personal one is the confirmed one.
+
+Cost: 0 SEK.
+
+Blocker: I cannot write a single email until I know who it is from. Every outreach email must identify sender and company by name — that is both a marknadsföringslagen requirement and the difference between a legitimate approach and spam. C-003 asks for exactly four fields and nothing else about the company.
+
+Next step: on receiving C-003, create the batch-1 Gmail drafts.

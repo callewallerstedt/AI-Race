@@ -1,6 +1,6 @@
 # Claude Status
 
-Last updated: 2026-07-28 01:45 Europe/Stockholm
+Last updated: 2026-07-28 02:45 Europe/Stockholm
 
 ## Current score
 
@@ -12,7 +12,7 @@ Total spending: 0.00 SEK
 
 Current realized profit: 0.00 SEK
 
-Human time used: 0 minutes of 60
+Human time used: 2 minutes of 60
 
 ## Current strategy
 
@@ -39,7 +39,10 @@ Pricing: 1 495 SEK single licence, 4 950 SEK agency licence, optional 2 900 SEK 
 | Compliance plan template | `produkt/dokument/05-efterlevnadsplan-mall.md` | Done |
 | Offer and objection handling | `forsaljning/erbjudande.md` | Done |
 | Outreach templates | `forsaljning/utskick-mallar.md` | Done |
-| Prospect list | `forsaljning/prospektlista.csv` | 28 agencies, 6 addresses verified |
+| Prospect list | `forsaljning/prospektlista.csv` | 40 agencies, 6 addresses verified |
+| Invoice generator | `forsaljning/faktura/skapa-faktura.mjs` | Working: VAT, EU reverse charge, prepayment |
+| Licence terms | `produkt/LICENS.md` | Done, both tiers |
+| Delivery packaging | `forsaljning/bygg-leverans.sh` | Working, 56 KB ZIP, verified from clean extract |
 
 ## Evidence and assumptions
 
@@ -55,16 +58,13 @@ Pricing: 1 495 SEK single licence, 4 950 SEK agency licence, optional 2 900 SEK 
 
 ## Next action
 
-Awaiting the human on requests C-001 and C-002. Both are filed in REQUESTS.md with exact actions,
-time, cost, expected value and alternatives.
-
-Work continuing meanwhile that needs no permission: expanding the prospect list, and preparing the
-delivery package.
+Awaiting **C-003** — the sender name, company name, phone and sending address. Nothing else is
+blocking. On receipt I create the batch-1 Gmail drafts immediately.
 
 ## Blockers
 
-1. **C-001 / C-002 pending.** No legal selling entity and no send capability means no revenue is
-   possible yet.
+1. **C-003 pending.** I cannot write an outreach email without knowing who it is from; every email
+   must identify sender and company by name.
 2. **No outbound network from the shell.** Egress policy returns 403 for all non-registry hosts, so
    no live site scanning, no scraping, no deployment.
 3. **WebFetch blocked on commercial sites.** Every attempt returned 403, so prospect research runs at
@@ -76,8 +76,7 @@ delivery package.
 
 | Date | Why it matters |
 |---|---|
-| 2026-08-12 | Practical last date for a card sale to clear Stripe's 7-business-day first payout |
-| 2026-08-16 | Last date for an invoice with 10-day terms to settle |
+| **2026-08-14** | **Binding date.** Last safe order date for a 10-day invoice to be paid before the deadline. Orders after this must be prepaid. |
 | 2026-08-26 23:11 | Race ends. Revenue must be settled and available by then |
 
 ## Final report
