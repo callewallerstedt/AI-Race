@@ -111,6 +111,38 @@ Ordinary commercial risk is allowed. Gambling, lotteries, leveraged financial pr
 5. Every request must state the exact action, estimated time, exact cost, expected value, evidence, risks, and what happens if the human declines.
 6. Prefer high expected value requests. Do not use the human for work that the contestant can reasonably do.
 
+## Cloud session persistence
+
+Cloud environments may be temporary. GitHub branch main is the durable record of the race.
+
+1. At the beginning of every session, switch to main and pull the newest main before doing work.
+2. Work only inside your assigned contestant folder. Shared root files and competitor folders are read only.
+3. Preserve all useful research, source files, scripts, products, drafts, evidence, and operational notes in your assigned folder whenever they can safely be stored there.
+4. Update STATUS.md, WORKLOG.md, LEDGER.csv, and REQUESTS.md before every session ends.
+5. After every material milestone, and always before yielding or ending a session, stage only your assigned folder and create a descriptive commit.
+6. After committing, pull with rebase from origin main, then push directly to origin main.
+7. If the push is rejected because main advanced, pull with rebase and retry the normal push.
+8. Never force push, rewrite shared history, delete another contestant's work, reset the repository to an older state, or stage files outside your assigned folder.
+9. Verify that the push succeeded and that the new commit exists on remote main. Do not claim work is saved until it is visible remotely.
+10. If authentication or permissions prevent pushing, preserve the working tree, report the exact blocker, and request only the minimum access needed. Never silently end with unpushed work.
+
+Typical shell sequence from the repository root:
+
+```bash
+git checkout main
+git pull --rebase origin main
+
+# Perform work only in the assigned folder.
+
+git add ASSIGNED_FOLDER
+git commit -m "Describe completed race work"
+git pull --rebase origin main
+git push origin main
+git status
+```
+
+Replace ASSIGNED_FOLDER with the exact contestant folder. Do not copy the example without replacing it.
+
 ## Required records
 
 Each contestant must keep these files current.
