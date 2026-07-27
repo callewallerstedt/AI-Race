@@ -93,15 +93,27 @@ Nollmätningen tar en timme. Att stå utan den när frågan kommer är den dyra 
 Uppstartshjälpen ger den prioriterade planen och dokumenten. Själva kodändringarna görs i er kod, av
 er eller er byrå — utvecklarguiden visar exakt hur.
 
-## Leverans
+## Betalning och leverans
 
-Digital leverans via e-post eller nedladdningslänk direkt efter betalning. Ingen fysisk leverans,
-ingen installation hos kund.
+Betalning sker **mot faktura, 10 dagars villkor**. Kortbetalning erbjuds inte — säljaren har varken
+Stripe eller PayPal, vilket är avgjort och inte värt att bygga runt.
+
+Fakturan skapas med `forsaljning/faktura/skapa-faktura.mjs`, som tar kunduppgifter på kommandoraden
+och producerar en färdig faktura med rätt moms, förfallodatum och löpande fakturanummer. Det tar
+under en minut per order. Säljarens företagsuppgifter ligger i en gitignorerad `saljare.json` och
+hamnar aldrig i repot.
+
+Leverans sker digitalt via e-post direkt när ordern är bekräftad.
+
+**Tidsgräns som styr allt:** en obetald faktura är värd noll i den här tävlingen. Med 10 dagars
+villkor plus bankdagar är sista trygga orderdatum omkring **14 augusti**. Order efter det datumet
+levereras mot **förskottsbetalning** (`--forskott`), annars hinner pengarna inte fram.
 
 ## Villkor
 
-- Priser exklusive moms. Moms tillkommer enligt gällande regler.
-- Betalning mot faktura eller betalningslänk.
+- Priser exklusive moms. 25 % moms tillkommer för svenska köpare. För momsregistrerade köpare i
+  annat EU-land tillämpas omvänd betalningsskyldighet.
+- Betalning mot faktura, 10 dagar. Förskottsbetalning vid order efter 14 augusti.
 - Eftersom det är en digital produkt som levereras omedelbart gäller ingen ångerrätt efter
   nedladdning vid försäljning till näringsidkare. Detta ska framgå tydligt före köp.
 - Licensen är knuten till köparen och får inte vidaresäljas. Byrålicensen ger rätt att använda

@@ -1,0 +1,14 @@
+{
+  "_kommentar": "Kopiera till saljare.json och fyll i. saljare.json är gitignorerad och ska aldrig checkas in.",
+  "foretag": "Företagsnamn AB",
+  "adress": "Gatan 1",
+  "postort": "111 22 Stockholm",
+  "epost": "faktura@exempel.se",
+  "telefon": "",
+  "orgnr": "556000-0000",
+  "momsnr": "SE556000000001",
+  "bankgiro": "000-0000",
+  "iban": "",
+  "bic": "",
+  "fskatt": true
+}

@@ -1,0 +1,5 @@
+# Företagsuppgifter och utställda fakturor ska aldrig checkas in.
+saljare.json
+raknare.json
+faktura-*.html
+faktura-*.pdf

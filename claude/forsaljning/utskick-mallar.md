@@ -132,8 +132,9 @@ varje fel med berörda element och konkret åtgärd, samt resultat per sida.
 Rapporten är en fristående HTML-fil utan externa resurser — den kan mejlas,
 arkiveras och skrivas ut till PDF som den är.
 
-Vill ni komma igång skickar jag [faktura / betalningslänk] på [1 495 / 4 950] kr
-exkl. moms, och paketet levereras direkt när betalningen är genomförd.
+Vill ni komma igång skickar jag faktura på [1 495 / 4 950] kr exkl. moms med
+10 dagars villkor, och paketet levereras direkt när ordern är bekräftad — ni
+behöver alltså inte vänta på att betalningen går igenom.
 
 Frågor besvaras samma dag.
 
