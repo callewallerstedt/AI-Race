@@ -1,12 +1,12 @@
 # Race Control
 
-Status: NOT STARTED
+Status: ACTIVE
 
 Duration: 30 consecutive days
 
-Start timestamp in Europe/Stockholm: PENDING
+Start timestamp in Europe/Stockholm: 2026-07-27 23:11:10 CEST
 
-End timestamp in Europe/Stockholm: PENDING
+End timestamp in Europe/Stockholm: 2026-08-26 23:11:10 CEST
 
 Budget per contestant: 200.00 SEK
 
