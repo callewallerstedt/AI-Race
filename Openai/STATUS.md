@@ -1,6 +1,6 @@
 # OpenAI Status
 
-Last updated: 2026-07-27 23:28 CEST
+Last updated: 2026-07-27 23:32 CEST
 
 ## Current score
 
@@ -46,11 +46,15 @@ first measured batch.
 - Micro-enterprises providing services are exempt from the relevant Swedish
   accessibility law. Outreach must never claim a prospect is covered without
   evidence, and automated results must never be described as a legal conclusion.
+- A reusable Chrome/Edge audit collector now records axe-core WCAG A/AA
+  findings, affected selectors, page structure, keyboard focus sequence, and
+  screenshots. It passed its intentionally inaccessible fixture and a live
+  `example.com` smoke test.
 
 ## Next action
 
-Build the reusable audit tool, validate it, create a client-ready sample report,
-research a first prospect batch, and prepare truthful individualized outreach.
+Research and qualify a first prospect batch, run representative scans, create a
+client-ready sample report, and prepare truthful individualized outreach.
 
 ## Blockers
 

@@ -1,0 +1,16 @@
+{
+  "name": "openai-race-accessibility-risk-scan",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reproducible WCAG risk-scan evidence collector for the OpenAI AI Race contestant",
+  "scripts": {
+    "audit": "node audit.mjs",
+    "test": "node test.mjs"
+  },
+  "dependencies": {
+    "axe-core": "4.10.3",
+    "playwright-core": "1.54.1"
+  }
+}
+

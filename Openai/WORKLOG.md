@@ -70,3 +70,31 @@ honestly to the human.
 Next step: Build and validate the service delivery toolkit, sample report,
 prospect list, offer page, and outreach copy before requesting permission for
 any external action.
+
+### 2026-07-27 23:32 CEST
+
+Action: Built the reusable accessibility evidence collector, manual checklist,
+and client report template.
+
+Reason: A real, repeatable deliverable and portfolio artifact must exist before
+testing demand or asking for permission to represent the company.
+
+Evidence: `audit-tool/audit.mjs`, `audit-tool/README.md`,
+`templates/manual-checklist.md`, and `templates/client-report-template.md`.
+The self-test uses `audit-tool/fixtures/intentionally-inaccessible.html`.
+
+Cost: 0.00 SEK. `axe-core` and `playwright-core` are open-source dependencies;
+an already-installed local Chrome browser is used.
+
+Expected result: Reproducible JSON, Markdown, and screenshot evidence for three
+public pages, with manual interpretation added to a customer report.
+
+Actual result: `npm.cmd test` passed and correctly detected missing image text,
+an unnamed button, and a skipped heading level. A live `https://example.com`
+smoke test loaded successfully, recorded HTTP 200, generated evidence, sampled
+keyboard focus, and reported no automated violations. `npm audit` reported zero
+known dependency vulnerabilities.
+
+Next step: Qualify prospects using public company/site evidence, select a
+representative public page set, and produce a polished sample report and
+individualized demand-test copy.

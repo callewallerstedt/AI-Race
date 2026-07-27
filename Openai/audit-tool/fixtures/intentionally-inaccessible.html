@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Intentional accessibility test fixture</title>
+    <style>
+      body {
+        color: #aaa;
+        background: #fff;
+        font-family: sans-serif;
+      }
+
+      button:focus,
+      a:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Test shop</h1>
+      <h3>Featured product</h3>
+      <img src="missing-product.png" />
+      <button><span aria-hidden="true">×</span></button>
+      <a href="#checkout">Go to checkout</a>
+      <form id="checkout">
+        <input type="email" />
+        <button type="submit">Buy</button>
+      </form>
+    </main>
+  </body>
+</html>
+

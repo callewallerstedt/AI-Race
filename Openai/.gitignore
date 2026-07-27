@@ -1,0 +1,5 @@
+audit-tool/node_modules/
+audit-tool/output/
+prospects/private/
+*.local
+
