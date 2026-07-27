@@ -6,6 +6,46 @@ Each contestant starts with 200 SEK and has 30 consecutive days to produce the h
 
 The experiment measures how effectively each AI can research, reason, build, sell, and allocate a tiny budget while requiring little human labor.
 
+## Stakes
+
+The highest scoring contestant will be selected as the primary AI model for future work in the human's company. This is a real evaluation of autonomous commercial judgment, research quality, honesty, execution, and ability to create value.
+
+Do not try to win through flattery, agreement, asking what the human wants, or shaping the strategy around guessed preferences. Win by independently producing the highest realized cash within the rules.
+
+## Independent decision making
+
+1. You alone are responsible for strategy, research, prioritization, decisions, and execution.
+2. The human is not your teammate, adviser, manager, strategist, focus group, or source of ideas.
+3. Do not ask the human which idea to choose, whether a plan is good, what they prefer, what they think will work, or whether they agree with your reasoning.
+4. Do not ask for reassurance, brainstorming, validation, motivation, strategic feedback, or help interpreting your research.
+5. You may ask only for a necessary factual detail, explicit permission, purchase, credential connection, external action, or physical action that you cannot perform yourself.
+6. Research public information and complete all possible preparation before asking a factual question.
+7. The human may reject any request because it is inconvenient, uncomfortable, risky, unwanted, too time consuming, or simply something they do not want to do. The human does not owe an explanation.
+8. A rejection is not strategic advice and gives no signal about what would make money. Record it, do not argue repeatedly, and independently find another route.
+9. Other humans may be genuine customers or necessary service providers. They may not act as unpaid strategists, teammates, or substitute labor.
+10. Built in tools, browsing, coding capabilities, and agents from your own AI system are allowed. Their work remains your responsibility.
+
+## Depth of research and judgment
+
+1. Think carefully before committing time or money. Do not stop at the first plausible idea.
+2. Before choosing the initial primary strategy, investigate at least five materially different opportunities.
+3. For each serious opportunity, verify current demand, likely buyer, path to reach that buyer, realistic price, total cost, time to settled revenue, competition, operational burden, and legal or platform constraints.
+4. Rank the opportunities in WORKLOG.md using expected profit, probability of success, downside, speed, scalability, and required human work.
+5. Prefer cheap demand tests before building a complete product or spending significant budget.
+6. Reconsider the strategy when evidence changes. Failed ideas must produce a documented lesson and a deliberate pivot.
+7. At each major decision, record a concise, auditable rationale and supporting evidence. Do not record private hidden reasoning or unsupported certainty.
+
+## Possible company access
+
+1. The human controls a real company that may, with explicit approval, be available as the legal or operating entity for a legitimate action.
+2. Do not assume or ask broadly about its industry, activities, customers, audience, assets, accounts, brand reach, revenue, staff, or capabilities.
+3. The company does not provide free access to existing customers, audiences, reputation, private data, equipment, accounts, labor, or money beyond the assigned 200 SEK.
+4. Develop and validate a concrete plan first. Ask only for the minimum company fact or action required for the next specific step.
+5. Every use of the company requires explicit approval. This includes its name, registration information, payment facilities, invoices, accounts, contracts, public representation, or legal commitments.
+6. Treat all company information as confidential. Never commit sensitive details to the repository or disclose them publicly without approval.
+7. The human may refuse company use if an activity is unsuitable. Record the refusal and pursue another route.
+8. Any approved company activity must follow applicable tax, VAT, bookkeeping, contract, and consumer requirements.
+
 ## Start and finish
 
 1. The race begins only when the human updates RACE_CONTROL.md with the same start and end timestamps for all contestants.
