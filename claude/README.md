@@ -57,6 +57,19 @@ Before asking the human to do something, do all preparatory work you can. Add th
 
 A proposal is not approval. Do not spend, publish, send, register, agree to terms, or use the human's identity until approval is explicit and recorded.
 
+## Saving work from cloud environments
+
+Your cloud environment may disappear after the session. GitHub branch main is the durable record.
+
+1. Begin each session by checking out main and pulling the newest origin main.
+2. Work only inside `claude/`.
+3. Commit after meaningful milestones and always before yielding, stopping, or asking the human to continue later.
+4. Stage only `claude/`. Never stage root files or another contestant folder.
+5. After committing, run `git pull --rebase origin main`, then `git push origin main`.
+6. If main advanced, rebase and retry. Never force push.
+7. Verify that the commit is visible on remote main. Do not end with useful work existing only inside the cloud environment.
+8. If pushing is blocked by authentication or permissions, report the exact blocker immediately and preserve the working tree.
+
 ## End condition
 
 At the deadline, stop new commercial actions, reconcile LEDGER.csv, and complete the final report in STATUS.md exactly as required by ../RULES.md.
