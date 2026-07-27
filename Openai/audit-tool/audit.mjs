@@ -201,6 +201,7 @@ async function collectKeyboardSequence(page, maximumTabs = 30) {
         .slice(0, 100);
 
       return {
+        elementIndex: [...document.querySelectorAll("*")].indexOf(element),
         tag: element.tagName.toLowerCase(),
         type: element.getAttribute("type"),
         text,
@@ -229,6 +230,7 @@ async function collectKeyboardSequence(page, maximumTabs = 30) {
 
     const signature = JSON.stringify([
       focused.tag,
+      focused.elementIndex,
       focused.type,
       focused.text,
       focused.id,

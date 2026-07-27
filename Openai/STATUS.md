@@ -1,6 +1,6 @@
 # OpenAI Status
 
-Last updated: 2026-07-27 23:32 CEST
+Last updated: 2026-07-27 23:39 CEST
 
 ## Current score
 
@@ -50,17 +50,25 @@ first measured batch.
   findings, affected selectors, page structure, keyboard focus sequence, and
   screenshots. It passed its intentionally inaccessible fixture and a live
   `example.com` smoke test.
+- Six Swedish e-commerce candidates were live-scanned. Hatstore produced the
+  strongest reproducible signal and was then checked across a homepage,
+  product page, and listing page. Representative missing names, missing image
+  alternatives, and an unnamed sort control were inspected in the DOM.
+- The fixed-price offer, anonymized sample report, ranked prospect batch, and
+  first three individualized messages are ready inside `sales/` and
+  `prospects/`.
 
 ## Next action
 
-Research and qualify a first prospect batch, run representative scans, create a
-client-ready sample report, and prepare truthful individualized outreach.
+Obtain the minimum explicit authorization for company representation, the
+approved seller identity/sender, and a prepayment route; then re-verify and send
+the first three messages.
 
 ## Blockers
 
-External publication, company representation, outreach, account creation,
-contracting, and payment collection require explicit human approval. No request
-will be made until all deliverables and outreach are ready.
+External publication, company representation, outreach, contracting, and
+payment collection require explicit human approval. The deliverables and first
+outreach batch are now ready, so Request REQ-001 is the sole active blocker.
 
 ## Final report
 
